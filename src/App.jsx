@@ -81,10 +81,10 @@ function App() {
     }
   }, [darkMode]);
   return (
-    <div className={darkMode ? "dark" : "light"}>
+    <div className={darkMode === "dark" ? "dark" : "light"}>
       <div className="grid grid-cols-5 h-screen text-center">
         <select
-          className="fixed text-white bottom-0 p-5"
+          className="fixed dark:text-white text-zinc-700 bottom-0 p-5"
           onChange={(e) => setDarkMode(e.target.value)}
         >
           <option value="dark">Dark Mode</option>
@@ -122,7 +122,7 @@ function App() {
           ) : null}
           <div className="container h-140 overflow-scroll" ref={scrollToAnswer}>
             <ul>
-              <div className="text-zinc-300">
+              <div className="dark:text-zinc-300 text-zinc-800">
                 <ul>
                   {result.map((item, index) => (
                     <QuestionAnswer item={item} index={index} key={index} />
@@ -131,7 +131,7 @@ function App() {
               </div>
             </ul>
           </div>
-          <div className="bg-zinc-800 w-1/2 p-1 text-white m-auto rounded-4xl border border-zinc-700 flex h-16 pr-5">
+          <div className="dark:bg-zinc-800 bg-red-100 w-1/2 p-1 dark:text-white text-zinc-800 m-auto rounded-4xl border border-zinc-700 flex h-16 pr-5">
             <input
               type="text"
               placeholder="Ask Me Anything"

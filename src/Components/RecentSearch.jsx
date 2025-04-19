@@ -11,8 +11,8 @@ const RecentSearch = ({
   };
   return (
     <>
-      <div className="col-span-1 bg-zinc-800 h-screen text-white p-4">
-        <h1 className="text-2xl font-bold mb-4 text-zinc-400 flex text-centre justify-center">
+      <div className="col-span-1 dark:bg-zinc-800 bg-red-100 h-screen dark:text-white  text-zinc-700 p-4">
+        <h1 className="text-2xl font-bold mb-4 dark:text-zinc-400 text-zinc-700 flex text-centre justify-center">
           <span> Recent History </span>
           <button className="cursor-pointer" onClick={handleClearHistory}>
             <svg
@@ -20,7 +20,7 @@ const RecentSearch = ({
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              fill="#e3e3e3"
+              fill="dark:#e3e3e3"
             >
               <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
             </svg>
@@ -31,7 +31,7 @@ const RecentSearch = ({
             <li
               key={index}
               onClick={() => handleHistoryClicked(item)}
-              className="hover:text-zinc-200 hover:bg-zinc-700"
+              className="dark:hover:text-zinc-200 dark:hover:bg-zinc-700 hover:bg-red-200 hover:text-zinc-800"
             >
               {item}
             </li>
